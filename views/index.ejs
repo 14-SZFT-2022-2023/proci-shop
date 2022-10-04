@@ -1,13 +1,21 @@
-<!DOCTYPE html>
-<html lang="hu">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/stilus.css" />
-    <title>Processzor webshop</title>
-  </head>
-  <body>
-    <h1>Proci</h1>
-    <p>Hello <%= nev %>!</p>
-  </body>
-</html>
+<%- include('./partials/header.ejs') %> 
+    <table style="width: 100%">
+        <tr style="padding-top: 200px;">
+            <th>Kép</th>
+            <th>Email</th>
+            <th>Jelszó</th>
+            <th>Műveletek</th>
+        </tr>
+        <% adatok.forEach(elem => { %>
+         <tr>
+             <td><img src="images/<%= elem.image  %> " alt="kép"></td>
+             <td><%= elem.email  %> </td>
+             <td><%= elem.password  %> </td>
+             <td>
+                <a href="/"><i class="fa fa-edit" style="color: green;  margin-right: 30px;"></i></a>
+                <a href="/"><i class="fa fa-trash" style="color: red; ; margin-right: 10px;"></i></a>
+             </td>
+         </tr>
+        <% }) %>
+    </table>
+<%- include('./partials/footer.ejs') %> 
