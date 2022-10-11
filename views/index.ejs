@@ -12,8 +12,8 @@
              <td><%= elem.email  %> </td>
              <td><%= elem.password  %> </td>
              <td>
-                <a href="/"><i class="fa fa-edit" style="color: green;  margin-right: 30px;"></i></a>
-                <a href="/"><i class="fa fa-trash" style="color: red; ; margin-right: 10px;"></i></a>
+                <a href="/edit/<%= elem._id  %>"><i class="fa fa-edit" style="color: green;  margin-right: 30px;"></i></a>
+                <a href="/delete/<%= elem._id  %>"><i class="fa fa-trash" style="color: red; ; margin-right: 10px;"></i></a>
              </td>
          </tr>
         <% }) %>

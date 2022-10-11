@@ -1,0 +1,19 @@
+<%- include('./partials/header.ejs') %> 
+    <form style="width: 30%; margin: 50px auto;" href="/edit/<%= user._id  %> " method="post" enctype="multipart/form-data">
+  <div class="mb-3">
+    <label for="email" class="form-label">Email address:</label>
+    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="email" value="<%= user.email  %> ">
+  </div>
+  <div class="mb-3">
+    <label for="password" class="form-label">Password:</label>
+    <input type="password" class="form-control" id="password" name="password" value="<%= user.password  %>" >
+  </div>
+  <div class="mb-3">
+  <label for="formFile" class="form-label">Choose an image: </label>
+  <input class="form-control" type="file" id="formFile" name="image">
+</div>
+<img src="/images/<%= user.image %> " alt="kép">
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<%- include('./partials/footer.ejs') %> 
